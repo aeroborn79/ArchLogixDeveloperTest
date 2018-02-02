@@ -6,8 +6,8 @@ public class Employee {
 	
 	int id;
 	String email;
-	String fname;
-	String lname;
+	String first;
+	String last;
 	ArrayList<WorkDetail> work;
 	
 	public Employee(String email) {
@@ -37,19 +37,19 @@ public class Employee {
 	}
 	
 	public String getFname() {
-		return fname;
+		return first;
 	}
 	
 	public void setFname(String fname) {
-		this.fname = fname;
+		this.first = fname;
 	}
 	
 	public String getLname() {
-		return lname;
+		return last;
 	}
 	
 	public void setLname(String lname) {
-		this.lname = lname;
+		this.last = lname;
 	}
 	
 	public ArrayList<WorkDetail> getWork() {

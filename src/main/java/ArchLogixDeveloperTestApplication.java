@@ -1,5 +1,6 @@
 import com.archlogixdevelopertest.controllers.FileProcessor;
 import com.archlogixdevelopertest.controllers.PathUtils;
+import com.archlogixdevelopertest.controllers.PostController;
 import com.archlogixdevelopertest.models.Employee;
 
 public class ArchLogixDeveloperTestApplication {
@@ -12,12 +13,12 @@ public class ArchLogixDeveloperTestApplication {
 		}
 		else {
 			String path = args[0];
+			System.out.println(path);
 			if(System.getProperty("os.name").toLowerCase().contains("windows")) {
-				PathUtils.pathConverter(path);
+				path = PathUtils.pathConverter(path);
 			}
-			
-			Employee employee = FileProcessor.fileProcessor(path);
-			
+			PostController.clearHours();
+			FileProcessor.fileProcessor(path);			
 		}
 	}
 
